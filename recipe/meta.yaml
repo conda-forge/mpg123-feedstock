@@ -1,6 +1,6 @@
 {% set name = "mpg123" %}
-{% set version = "1.24.0" %}
-{% set sha256 = "55fb169a7711938f5df0497d1ffe28419fbef50011dc01d00b216379e6a2256c" %}
+{% set version = "1.25.3" %}
+{% set sha256 = "c24848dd1fcaf6900a2b1f5549996904f75fe6e05de982da655f8c626b375644" %}
 
 package:
     name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
     sha256: {{ sha256 }}
 
 build:
-    number: 1
+    number: 0
     skip: true  # [win]
 
 requirements:
