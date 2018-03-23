@@ -1,6 +1,6 @@
 {% set name = "mpg123" %}
-{% set version = "1.25.0" %}
-{% set sha256 = "552e3e1db045e00f474252917007795ac295863fc8b13891859b3382d2f24e48" %}
+{% set version = "1.25.7" %}
+{% set sha256 = "31b15ebcf26111b874732e07c8e60de5053ee555eea15fb70c657a4f9f0344f3" %}
 
 package:
     name: {{ name|lower }}
