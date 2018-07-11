@@ -1,15 +1,14 @@
 {% set name = "mpg123" %}
-{% set version = "1.25.0" %}
-{% set sha256 = "552e3e1db045e00f474252917007795ac295863fc8b13891859b3382d2f24e48" %}
+{% set version = "1.25.8" %}
 
 package:
-    name: {{ name|lower }}
-    version: {{ version }}
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-    fn: {{ name }}-{{ version }}.tar.bz2
-    url: https://sourceforge.net/projects/{{ name }}/files/{{ name }}/{{ version }}/{{ name }}-{{ version }}.tar.bz2/download
-    sha256: {{ sha256 }}
+  fn: {{ name }}-{{ version }}.tar.bz2
+  url: https://sourceforge.net/projects/{{ name }}/files/{{ name }}/{{ version }}/{{ name }}-{{ version }}.tar.bz2/download
+  sha256: 79da51efae011814491f07c95cb5e46de0476aca7a0bf240ba61cfc27af8499b
 
 build:
     number: 0
@@ -17,15 +16,15 @@ build:
 
 requirements:
   build:
-    - toolchain
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
 
 test:
   commands:
-    - test -f $PREFIX/lib/libmpg123.dylib  # [osx]
-    - test -f $PREFIX/lib/libout123.dylib  # [osx]
+    - test -f $PREFIX/lib/libmpg123${SHLIB_EXT}  # [not win]
+    - test -f $PREFIX/lib/libout123${SHLIB_EXT}  # [not win]
     - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
-    - test -f $PREFIX/lib/libmpg123.so  # [linux]
-    - test -f $PREFIX/lib/libout123.so  # [linux]
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [linux]
 
 about:
