@@ -1,5 +1,5 @@
 {% set name = "mpg123" %}
-{% set version = "1.25.8" %}
+{% set version = "1.26.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.bz2
   url: https://sourceforge.net/projects/{{ name }}/files/{{ name }}/{{ version }}/{{ name }}-{{ version }}.tar.bz2/download
-  sha256: 79da51efae011814491f07c95cb5e46de0476aca7a0bf240ba61cfc27af8499b
+  sha256: 74d6629ab7f3dd9a588b0931528ba7ecfa989a2cad6bf53ffeef9de31b0fe032
 
 build:
-    number: 1000
-    skip: true  # [win]
+  number: 0
+  skip: true  # [win]
 
 requirements:
   build:
@@ -28,13 +28,13 @@ test:
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [linux]
 
 about:
-    home: https://www.mpg123.de/
-    license: LGPL-2.1
-    license_family: LGPL
-    license_file: COPYING
-    summary: "mpg123 - fast console MPEG Audio Player and decoder library"
+  home: https://www.mpg123.de/
+  license: LGPL-2.1
+  license_family: LGPL
+  license_file: COPYING
+  summary: mpg123 - fast console MPEG Audio Player and decoder library
 
 extra:
-    recipe-maintainers:
-        - hbredin
-        - thomasfillon
+  recipe-maintainers:
+    - hbredin
+    - thomasfillon
