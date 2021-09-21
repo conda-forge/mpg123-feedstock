@@ -16,6 +16,7 @@ build:
 
 requirements:
   build:
+    - gnuconfig  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
@@ -24,8 +25,6 @@ test:
   commands:
     - test -f $PREFIX/lib/libmpg123${SHLIB_EXT}  # [not win]
     - test -f $PREFIX/lib/libout123${SHLIB_EXT}  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [linux]
 
 about:
     home: https://www.mpg123.de/
