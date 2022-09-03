@@ -11,8 +11,14 @@ source:
   sha256: 963885d8cc77262f28b77187c7d189e32195e64244de2530b798ddf32183e847
 
 build:
-    number: 0
+    number: 1
     skip: true  # [win]
+    run_exports:
+      # Seems to have good compatibility
+      # https://abi-laboratory.pro/index.php?view=timeline&l=mpg123
+      # But the minor releases are not too often, so I think it is probably
+      # best to play it safe
+      - {{ pin_subpackage("mpg123", max_pin="x.x") }}
 
 requirements:
   build:
