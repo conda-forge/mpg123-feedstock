@@ -1,5 +1,5 @@
 {% set name = "mpg123" %}
-{% set version = "1.29.3" %}
+{% set version = "1.30.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,17 +8,17 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.bz2
   url: https://sourceforge.net/projects/{{ name }}/files/{{ name }}/{{ version }}/{{ name }}-{{ version }}.tar.bz2/download
-  sha256: 963885d8cc77262f28b77187c7d189e32195e64244de2530b798ddf32183e847
+  sha256: c7ea863756bb79daed7cba2942ad3b267a410f26d2dfbd9aaf84451ff28a05d7
 
 build:
-    number: 1
-    skip: true  # [win]
-    run_exports:
+  number: 0
+  skip: true  # [win]
+  run_exports:
       # Seems to have good compatibility
       # https://abi-laboratory.pro/index.php?view=timeline&l=mpg123
       # But the minor releases are not too often, so I think it is probably
       # best to play it safe
-      - {{ pin_subpackage("mpg123", max_pin="x.x") }}
+    - {{ pin_subpackage("mpg123", max_pin="x.x") }}
 
 requirements:
   build:
@@ -35,14 +35,14 @@ test:
     - test -f $PREFIX/lib/libout123${SHLIB_EXT}  # [not win]
 
 about:
-    home: https://www.mpg123.de/
-    license: LGPL-2.1-only
-    license_family: LGPL
-    license_file: COPYING
-    summary: mpg123 - fast console MPEG Audio Player and decoder library
+  home: https://www.mpg123.de/
+  license: LGPL-2.1-only
+  license_family: LGPL
+  license_file: COPYING
+  summary: mpg123 - fast console MPEG Audio Player and decoder library
 
 extra:
-    recipe-maintainers:
-        - hbredin
-        - thomasfillon
-        - bmcfee
+  recipe-maintainers:
+    - hbredin
+    - thomasfillon
+    - bmcfee
