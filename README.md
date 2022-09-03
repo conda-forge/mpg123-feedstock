@@ -3,7 +3,7 @@ About mpg123
 
 Home: https://www.mpg123.de/
 
-Package license: LGPL-2.1
+Package license: LGPL-2.1-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mpg123-feedstock/blob/main/LICENSE.txt)
 
@@ -176,6 +176,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bmcfee](https://github.com/bmcfee/)
 * [@hbredin](https://github.com/hbredin/)
 * [@thomasfillon](https://github.com/thomasfillon/)
 
