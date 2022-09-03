@@ -36,10 +36,10 @@ test:
 
 about:
     home: https://www.mpg123.de/
-    license: LGPL-2.1
+    license: LGPL-2.1-only
     license_family: LGPL
     license_file: COPYING
-    summary: "mpg123 - fast console MPEG Audio Player and decoder library"
+    summary: mpg123 - fast console MPEG Audio Player and decoder library
 
 extra:
     recipe-maintainers:
