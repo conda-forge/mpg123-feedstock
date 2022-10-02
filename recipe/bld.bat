@@ -11,7 +11,7 @@ cmake -G "Ninja" ^
     -DCMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX%" ^
     -DCMAKE_PREFIX_PATH:PATH="%LIBRARY_PREFIX%" ^
     -DBUILD_SHARED_LIBS=ON ^
-    -DBUILD_PROGRAMS=OFF ^
+    -DBUILD_PROGRAMS=ON ^
     -DBUILD_TESTING=OFF ^
     ..\\ports\\cmake
 if errorlevel 1 exit 1
