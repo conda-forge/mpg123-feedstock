@@ -12,6 +12,8 @@ source:
 
 build:
   number: 2
+  # Temporarily disabling non-windows builds
+  skip : true  # [not win]
   run_exports:
       # Seems to have good compatibility
       # https://abi-laboratory.pro/index.php?view=timeline&l=mpg123
@@ -27,6 +29,7 @@ requirements:
     - make  # [not win]
     - cmake  # [win]
     - ninja  # [win]
+    - yasm  # [win]
     - pkg-config  # [unix]
   host:
 
