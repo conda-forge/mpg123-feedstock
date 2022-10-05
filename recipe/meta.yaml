@@ -11,8 +11,7 @@ source:
   sha256: c7ea863756bb79daed7cba2942ad3b267a410f26d2dfbd9aaf84451ff28a05d7
 
 build:
-  number: 0
-  skip: true  # [win]
+  number: 1
   run_exports:
       # Seems to have good compatibility
       # https://abi-laboratory.pro/index.php?view=timeline&l=mpg123
@@ -25,14 +24,21 @@ requirements:
     - gnuconfig  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - make
-    - pkg-config
+    - make  # [not win]
+    - cmake  # [win]
+    - ninja  # [win]
+    - yasm  # [win]
+    - pkg-config  # [unix]
   host:
 
 test:
   commands:
     - test -f $PREFIX/lib/libmpg123${SHLIB_EXT}  # [not win]
     - test -f $PREFIX/lib/libout123${SHLIB_EXT}  # [not win]
+    - if not exist %PREFIX%\\Library\\bin\\mpg123.dll exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\lib\\mpg123.lib exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\bin\\out123.dll exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\lib\\out123.lib exit 1  # [win]
 
 about:
   home: https://www.mpg123.de/
