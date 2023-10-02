@@ -1,5 +1,5 @@
 {% set name = "mpg123" %}
-{% set version = "1.32.2" %}
+{% set version = "1.32.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.bz2
   url: https://sourceforge.net/projects/{{ name }}/files/{{ name }}/{{ version }}/{{ name }}-{{ version }}.tar.bz2/download
-  sha256: ce77e9c20f4fa47c78f5cc7a7fcc97b9a2c36a03eb31fba8e0cf9933df79ea38
+  sha256: 2d9913a57d4ee8f497a182c6e82582602409782a4fb481e989feebf4435867b4
 
 build:
   number: 0
