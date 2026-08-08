@@ -1,4 +1,4 @@
-{% set version = "1.33.2" %}
+{% set version = "1.33.6" %}
 
 package:
   name: mpg123
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://downloads.sourceforge.net/project/mpg123/mpg123/{{ version }}/mpg123-{{ version }}.tar.bz2
-  sha256: 2c54fabbfa696dce8f9b137c8ef7a429a061f8fe633cd7d0a511809855f2c219
+  sha256: 929a7c18ba662b8927aed4de229ad9ae8ab2b4806dd0f30b90113eb1b4e2195a
 
 build:
   number: 0
