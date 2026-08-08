@@ -11,4 +11,4 @@ cxx_compiler:
 mpg123:
 - '1.32'
 target_platform:
-- win-64
+- win-arm64
