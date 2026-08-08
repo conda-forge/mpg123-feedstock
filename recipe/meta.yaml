@@ -5,7 +5,7 @@ package:
   version: "{{ version }}"
 
 source:
-  url: https://sourceforge.net/projects/mpg123/files/mpg123/{{ version }}/mpg123-{{ version }}.tar.bz2/download
+  url: https://downloads.sourceforge.net/project/mpg123/mpg123/{{ version }}/mpg123-{{ version }}.tar.bz2
   sha256: 2c54fabbfa696dce8f9b137c8ef7a429a061f8fe633cd7d0a511809855f2c219
 
 build:
