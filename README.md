@@ -215,5 +215,6 @@ Feedstock Maintainers
 
 * [@bmcfee](https://github.com/bmcfee/)
 * [@hbredin](https://github.com/hbredin/)
+* [@hmaarrfk](https://github.com/hmaarrfk/)
 * [@thomasfillon](https://github.com/thomasfillon/)
 
