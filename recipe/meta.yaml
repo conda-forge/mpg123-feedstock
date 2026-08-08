@@ -1,14 +1,12 @@
-{% set name = "mpg123" %}
-{% set version = "1.32.9" %}
+{% set version = "1.33.2" %}
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: mpg123
+  version: "{{ version }}"
 
 source:
-  fn: {{ name }}-{{ version }}.tar.bz2
-  url: https://sourceforge.net/projects/{{ name }}/files/{{ name }}/{{ version }}/{{ name }}-{{ version }}.tar.bz2/download
-  sha256: 03b61e4004e960bacf2acdada03ed94d376e6aab27a601447bd4908d8407b291
+  url: https://downloads.sourceforge.net/project/mpg123/mpg123/{{ version }}/mpg123-{{ version }}.tar.bz2
+  sha256: 2c54fabbfa696dce8f9b137c8ef7a429a061f8fe633cd7d0a511809855f2c219
 
 build:
   number: 0
@@ -53,3 +51,4 @@ extra:
     - hbredin
     - thomasfillon
     - bmcfee
+    - hmaarrfk
