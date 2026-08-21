@@ -9,6 +9,6 @@ channel_targets:
 cxx_compiler:
 - vs2022
 mpg123:
-- '1.32'
+- '1.33'
 target_platform:
 - win-arm64
